@@ -5,11 +5,26 @@
       h1 {
         text-align: center;
       }
+       .menu {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        background-color: lightgray;
+        padding: 10px 20px;
+      }
+      .menu a {
+        text-decoration: none;
+        color: black;
+        margin-right: 20px;
+      }
     </style>
   </head>
 <body>
+<div class="menu">
+      <a href="#">Settings</a>
+      <a href="#">Predictions</a>
+    </div>
   <h1>Larry's Predictions</h1>
-  <br>
   <label for="grain-select">Select a grain:</label>
   <select id="grain-select">
     <option value="wheat">Wheat</option>
