@@ -1,3 +1,4 @@
+Note - not yet working just an example for now.
 Entry:Buy stop 312.25
 Protective Stop: Sell 310.25
 
