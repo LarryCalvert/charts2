@@ -33,15 +33,16 @@
     <option value="oats">Oats</option>
   </select>
 
-  <p>This is a 1 bar ahead price level predictor. </p>
+  <p>This is a 1 bar (or candlestick) ahead price level predictor. </p>
   <p>Select an area to zoom in. Home icon at top right will reset both axes.
      Click legend items at right to remove and restore traces.
      The black line (zz) is a simple zigzag indicator - normally not predictive.
      It will be replaced with a green/red line showing actual trades soon.
      Note: hpred, lpred, cpred, mpred are 1 bar ahead predictions of high, low, close, and mid respectively.
-     Try removing hpred and zz and look at cpred (red) mpred (green) crossings to see advance
+     hpred and lpred will set order price levels - click on the legend to have them drawn.
+     Also take a look at cpred (red) mpred (green) crossings to see advance
      indication of multiple day direction change (trend).
-     I will add candlesticks instead of bars as an option also at some point.
+     I will add candlesticks instead of bars as an option also at some point. I prefer bars.
      <br>    
      The LB= stands for LastBar.
      Make sure it is the last trading day as I have to manually kick off fetch data and run predictions right now.
