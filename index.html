@@ -32,6 +32,7 @@
     <option value="corn">Corn</option>
     <option value="oats">Oats</option>
   </select>
+
   <p>This is a 1 bar ahead price level predictor. </p>
   <p>Select an area to zoom in. Home icon at top right will reset both axes.
      Click legend items at right to remove and restore traces.
@@ -41,15 +42,18 @@
      Try removing hpred and zz and look at cpred (red) mpred (green) crossings to see advance
      indication of multiple day direction change (trend).
      I will add candlesticks instead of bars as an option also at some point.
+     <br>    
+     The LB= stands for LastBar.
+     Make sure it is the last trading day as I have to manually kick off fetch data and run predictions right now.
+     I will automate that down the road.
   </p>
+
   <iframe style="width: 90%;height: 90%; border:3px solid black; padding-top: 10px;"
      src="https://larrycalvert.github.io/charts2/wheat.html" id="Iframe">
   </iframe>
-  <br>
-  <p>
-  Next bar or candlestick - order placement:
-  </p>
-  <iframe style="width:40%;height:40%;" src="https://larrycalvert.github.io/charts2/wheat.txt"> </iframe>
-  <p>Predictions made by Larry Calvert Copyright 2023</p>
+
+  <p>Predictions made by Larry Calvert &nbsp &nbsp &nbsp Copyright 2023</p>
+
 </body>
 </html>
+<! -- END --> 
