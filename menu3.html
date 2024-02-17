@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>Larry's Predictions V0.01</title>
+  <title>Larry's Predictions</title>
   <style>
     /* Styling for the page */
     body {
@@ -61,6 +61,8 @@
     }
   </style>
   <script>
+    var version = "V0.02"; // Version number
+
     // Function to handle menu item clicks
     function displayMenuItem(item) {
       var dropdown = item.querySelector('.dropdown-content'); // Find the dropdown within the menu item
@@ -160,12 +162,13 @@
 
     // Load the CSV file when the page is loaded
     window.onload = function() {
+      document.title = "Larry's Predictions " + version; // Update the title with the version number
       fetchCSVFile();
     };
   </script>
 </head>
 <body>
-  <div id="title"><strong>Larry's Predictions V0.01</strong></div> <!-- Make the title bold -->
+  <div id="title"><strong>Larry's Predictions</strong> <span id="version"></span></div> <!-- Make the title bold -->
   <div id="subtitle">In development - will be changing and may not always be up to date yet.</div>
   <ul id="menu"></ul>
   <div id="content">
@@ -173,5 +176,9 @@
       <p style="font-weight: bold; font-size: 20px; text-align: center;">Chart for Buys Only will show here</p>
     </iframe>
   </div>
+  <script>
+    // Display version number
+    document.getElementById('version').textContent = version;
+  </script>
 </body>
 </html>
