@@ -3,32 +3,27 @@
 <head>
   <title>CSV Menu</title>
   <style>
-/* Styling for the menu */
-#menu {
-  list-style-type: none;
-  margin: 0;
-  padding: 0;
-  display: flex; /* Display the menu items horizontally */
-}
-
-#menu li {
-  cursor: pointer;
-  padding: 5px;
-  background-color: #f1f1f1;
-  margin-right: 5px; /* Add some spacing between menu items */
-}
-
-#menu li:hover {
-  background-color: #ddd;
-}
-
-#menu li.selected {
-  background-color: #b3d9ff;
-}
-
-#content {
-  margin-top: 10px;
-}
+    /* Styling for the menu */
+    #menu {
+      list-style-type: none;
+      margin: 0;
+      padding: 0;
+    }
+    #menu li {
+      cursor: pointer;
+      padding: 5px;
+      background-color: #f1f1f1;
+      margin-bottom: 5px;
+    }
+    #menu li:hover {
+      background-color: #ddd;
+    }
+    #menu li.selected {
+      background-color: #b3d9ff;
+    }
+    #content {
+      margin-top: 10px;
+    }
   </style>
   <script>
     // Function to handle menu item clicks
@@ -84,7 +79,7 @@
           }
         }
       };
-      xhr.open('GET', 'menu.csv', true);
+      xhr.open('GET', 'Groups.csv', true); // Changed here to read from Groups.csv
       xhr.send();
     }
 
