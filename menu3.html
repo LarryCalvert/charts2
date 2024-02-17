@@ -61,12 +61,14 @@
     }
   </style>
   <script>
-    // Function to handle menu item clicks
-    function displayMenuItem(item) {
-      var dropdown = item.nextElementSibling;
-      dropdown.style.display = dropdown.style.display === "block" ? "none" : "block";
-      item.classList.toggle("selected");
-    }
+	// Function to handle menu item clicks
+	function displayMenuItem(item) {
+		var dropdown = item.querySelector('.dropdown-content'); // Find the dropdown within the menu item
+		if (dropdown) {
+			dropdown.style.display = dropdown.style.display === "block" ? "none" : "block";
+			item.classList.toggle("selected");
+		}	
+	}
 
     // Function to handle dropdown item clicks
     function displayDropdownItem(item) {
@@ -163,7 +165,7 @@
   </script>
 </head>
 <body>
-  <div id="title"><strong>Larry's Predictions V0.05</strong></div> <!-- Make the title bold -->
+  <div id="title"><strong>Larry's Predictions V0.06</strong></div> <!-- Make the title bold -->
   <div id="subtitle">In development - will be changing and may not always be up to date yet.</div>
   <ul id="menu"></ul>
   <div id="content">
