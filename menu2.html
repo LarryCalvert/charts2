@@ -3,6 +3,19 @@
 <head>
   <title>CSV Menu</title>
   <style>
+    /* Styling for the page */
+    body {
+      text-align: center; /* Center align the content */
+    }
+    #title {
+      font-size: 24px;
+      margin-bottom: 10px;
+    }
+    #subtitle {
+      font-style: italic;
+      margin-bottom: 20px;
+    }
+
     /* Styling for the menu */
     #menu {
       list-style-type: none;
@@ -10,6 +23,7 @@
       padding: 0;
       display: flex; /* Display menu items horizontally */
       flex-wrap: wrap; /* Wrap items to next line if needed */
+      justify-content: center; /* Center align menu items */
     }
     #menu li {
       cursor: pointer;
@@ -91,6 +105,8 @@
   </script>
 </head>
 <body>
+  <div id="title">Larry's Predictions</div>
+  <div id="subtitle">In development - will be changing and may not always be up to date yet.</div>
   <h1>CSV Menu</h1>
   <ul id="menu"></ul>
   <div id="content">
