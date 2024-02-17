@@ -61,7 +61,7 @@
     }
   </style>
   <script>
-    var version = "V0.08"; // Version number
+    var version = "V0.09"; // Version number
 
     // Function to handle menu item clicks
     function displayMenuItem(item) {
@@ -74,7 +74,12 @@
 
     // Function to handle dropdown item clicks
     function displayDropdownItem(item) {
-      document.getElementById('content-frame').src = item.getAttribute('data-url');
+      var iframe1 = document.getElementById('content-frame');
+      var iframe2 = document.getElementById('content-frame2');
+      var iframe3 = document.getElementById('content-frame3');
+      iframe1.src = item.getAttribute('data-url');
+      iframe2.src = item.getAttribute('data-url');
+      iframe3.src = item.getAttribute('data-url');
     }
 
     // Function to read the CSV file and populate the dropdown menu
