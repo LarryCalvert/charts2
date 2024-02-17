@@ -61,14 +61,14 @@
     }
   </style>
   <script>
-	// Function to handle menu item clicks
-	function displayMenuItem(item) {
-		var dropdown = item.querySelector('.dropdown-content'); // Find the dropdown within the menu item
-		if (dropdown) {
-			dropdown.style.display = dropdown.style.display === "block" ? "none" : "block";
-			item.classList.toggle("selected");
-		}	
-	}
+    // Function to handle menu item clicks
+    function displayMenuItem(item) {
+      var dropdown = item.querySelector('.dropdown-content'); // Find the dropdown within the menu item
+      if (dropdown) {
+        dropdown.style.display = dropdown.style.display === "block" ? "none" : "block";
+        item.classList.toggle("selected");
+      }
+    }
 
     // Function to handle dropdown item clicks
     function displayDropdownItem(item) {
@@ -165,11 +165,13 @@
   </script>
 </head>
 <body>
-  <div id="title"><strong>Larry's Predictions</strong></div> <!-- Make the title bold -->
-  <div id="subtitle">1 Bar ahead Order Placement - looking very profitable.<br>In development - will be changing and may not always be up to date yet.</div>
+  <div id="title"><strong>Larry's Predictions V0.01</strong></div> <!-- Make the title bold -->
+  <div id="subtitle">In development - will be changing and may not always be up to date yet.</div>
   <ul id="menu"></ul>
   <div id="content">
-    <iframe id="content-frame" src="" width="90%" height="600px" style="border:3px solid black; padding-top: 10px;"></iframe>
+    <iframe id="content-frame" src="about:blank" width="90%" height="600px" style="border:3px solid black; padding-top: 10px;">
+      <p style="font-weight: bold; font-size: 20px; text-align: center;">Chart for Buys Only will show here</p>
+    </iframe>
   </div>
 </body>
 </html>
