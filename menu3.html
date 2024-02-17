@@ -88,6 +88,7 @@
 
     // Function to fetch the CSV file from the server and populate the dropdown
     function fetchAndPopulateDropdown(csvFile, dropdown) {
+	  console.log("At fetchAndPopulateDropdown csvFile=[" + csvFile + "]"); 
       var xhr = new XMLHttpRequest();
       xhr.onreadystatechange = function() {
         if (xhr.readyState === XMLHttpRequest.DONE) {
@@ -156,7 +157,7 @@
   </script>
 </head>
 <body>
-  <div id="title"><strong>Larry's Predictions V0.01</strong></div> <!-- Make the title bold -->
+  <div id="title"><strong>Larry's Predictions V0.02</strong></div> <!-- Make the title bold -->
   <div id="subtitle">In development - will be changing and may not always be up to date yet.</div>
   <ul id="menu"></ul>
   <div id="content">
