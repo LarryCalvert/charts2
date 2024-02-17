@@ -32,6 +32,7 @@
       background-color: #f1f1f1;
       margin-right: 5px; /* Add spacing between menu items */
       margin-bottom: 5px; /* Add some vertical spacing */
+      position: relative; /* Make the dropdown position relative */
     }
     .menu-item:hover {
       background-color: #ddd;
@@ -42,6 +43,8 @@
     .dropdown-content {
       display: none;
       position: absolute;
+      top: 100%; /* Position the dropdown below the menu item */
+      left: 0;
       background-color: #f9f9f9;
       min-width: 160px;
       box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
@@ -102,41 +105,41 @@
       xhr.send();
     }
 
-	// Function to read the CSV file and populate the menu
-	function populateMenu(csvData) {
-		var menu = document.getElementById('menu');
-		var lines = csvData.split('\n');
+    // Function to read the CSV file and populate the menu
+    function populateMenu(csvData) {
+      var menu = document.getElementById('menu');
+      var lines = csvData.split('\n');
 
-		// Iterate over the lines and create menu items
-		for (var i = 0; i < lines.length; i++) {
-			var fields = lines[i].split(',');
-			if (fields[0].trim().length >= 3) { // Check if length is greater than or equal to 3
-				console.log(fields[0]); // Log the first column
-				var menuItem = document.createElement('li');
-				menuItem.textContent = fields[0];
-				menuItem.classList.add('menu-item');
+      // Iterate over the lines and create menu items
+      for (var i = 0; i < lines.length; i++) {
+        var fields = lines[i].split(',');
+        if (fields[0].trim().length >= 3) { // Check if length is greater than or equal to 3
+          console.log(fields[0]); // Log the first column
+          var menuItem = document.createElement('li');
+          menuItem.textContent = fields[0];
+          menuItem.classList.add('menu-item');
 
-				// Create dropdown menu for each menu item
-				var dropdown = document.createElement('div');
-				dropdown.classList.add('dropdown-content');
-				menuItem.appendChild(dropdown);
+          // Create dropdown menu for each menu item
+          var dropdown = document.createElement('div');
+          dropdown.classList.add('dropdown-content');
+          menuItem.appendChild(dropdown);
 
-				// Fetch and populate dropdown menu with data from CSV file
-				var csvFileName = fields[0].trim() + '.csv';
-				console.log("Fetching CSV file for menu item: " + csvFileName); // Debugging
-				fetchAndPopulateDropdown(csvFileName, dropdown);
+          // Fetch and populate dropdown menu with data from CSV file
+          var csvFileName = fields[0].trim() + '.csv';
+          console.log("Fetching CSV file for menu item: " + csvFileName); // Debugging
+          fetchAndPopulateDropdown(csvFileName, dropdown);
 
-				// Attach click event listener to each menu item
-				menuItem.addEventListener('click', function() {
-					displayMenuItem(this);
-				});
+          // Attach click event listener to each menu item
+          menuItem.addEventListener('click', function() {
+            displayMenuItem(this);
+          });
 
-				// Append the menu item to the menu
-				menu.appendChild(menuItem);
-			}	
-		}
-	}
-    
+          // Append the menu item to the menu
+          menu.appendChild(menuItem);
+        }
+      }
+    }
+
     // Function to fetch the CSV file from the server
     function fetchCSVFile() {
       var xhr = new XMLHttpRequest();
@@ -160,7 +163,7 @@
   </script>
 </head>
 <body>
-  <div id="title"><strong>Larry's Predictions V0.04</strong></div> <!-- Make the title bold -->
+  <div id="title"><strong>Larry's Predictions V0.05</strong></div> <!-- Make the title bold -->
   <div id="subtitle">In development - will be changing and may not always be up to date yet.</div>
   <ul id="menu"></ul>
   <div id="content">
