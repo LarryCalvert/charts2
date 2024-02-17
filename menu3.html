@@ -61,7 +61,7 @@
     }
   </style>
   <script>
-    var version = "V0.16"; // Version number
+    var version = "V0.01"; // Version number
 
     // Function to handle menu item clicks
     function displayMenuItem(item) {
@@ -155,7 +155,17 @@
           menu.appendChild(menuItem);
 
           // Set initial text in iframes
-          var initialText = "Initial text for " + fields[0].trim() + " will appear here";
+          var initialText;
+          switch (fields[0].trim()) {
+            case "Futures":
+              initialText = "Chart for buys only will appear here";
+              break;
+            case "Options":
+              initialText = "Chart for sells only will appear here";
+              break;
+            default:
+              initialText = "Chart for both buys and sells will appear here";
+          }
           var iframes = document.querySelectorAll('iframe');
           for (var j = 0; j < iframes.length; j++) {
             if (iframes[j].contentDocument) {
