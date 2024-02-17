@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>Larry's Predictions</title>
+  <title>Larry's Predictions V0.01</title>
   <style>
     /* Styling for the page */
     body {
@@ -88,7 +88,6 @@
 
     // Function to fetch the CSV file from the server and populate the dropdown
     function fetchAndPopulateDropdown(csvFile, dropdown) {
-	  console.log("At fetchAndPopulateDropdown csvFile=[" + csvFile + "]"); 
       var xhr = new XMLHttpRequest();
       xhr.onreadystatechange = function() {
         if (xhr.readyState === XMLHttpRequest.DONE) {
@@ -111,26 +110,28 @@
       // Iterate over the lines and create menu items
       for (var i = 0; i < lines.length; i++) {
         var fields = lines[i].split(',');
-        console.log(fields[0]); // Log the first column
-        var menuItem = document.createElement('li');
-        menuItem.textContent = fields[0];
-        menuItem.classList.add('menu-item');
+        if (fields[0].trim().length >= 3) { // Check if length is greater than or equal to 3
+          console.log(fields[0]); // Log the first column
+          var menuItem = document.createElement('li');
+          menuItem.textContent = fields[0];
+          menuItem.classList.add('menu-item');
 
-        // Create dropdown menu for each menu item
-        var dropdown = document.createElement('div');
-        dropdown.classList.add('dropdown-content');
-        menuItem.appendChild(dropdown);
+          // Create dropdown menu for each menu item
+          var dropdown = document.createElement('div');
+          dropdown.classList.add('dropdown-content');
+          menuItem.appendChild(dropdown);
 
-        // Fetch and populate dropdown menu with data from CSV file
-        fetchAndPopulateDropdown(fields[0] + '.csv', dropdown);
+          // Fetch and populate dropdown menu with data from CSV file
+          fetchAndPopulateDropdown(fields[0] + '.csv', dropdown);
 
-        // Attach click event listener to each menu item
-        menuItem.addEventListener('click', function() {
-          displayMenuItem(this);
-        });
+          // Attach click event listener to each menu item
+          menuItem.addEventListener('click', function() {
+            displayMenuItem(this);
+          });
 
-        // Append the menu item to the menu
-        menu.appendChild(menuItem);
+          // Append the menu item to the menu
+          menu.appendChild(menuItem);
+        }
       }
     }
 
@@ -157,7 +158,7 @@
   </script>
 </head>
 <body>
-  <div id="title"><strong>Larry's Predictions V0.02</strong></div> <!-- Make the title bold -->
+  <div id="title"><strong>Larry's Predictions V0.01</strong></div> <!-- Make the title bold -->
   <div id="subtitle">In development - will be changing and may not always be up to date yet.</div>
   <ul id="menu"></ul>
   <div id="content">
