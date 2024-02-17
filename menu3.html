@@ -61,7 +61,7 @@
     }
   </style>
   <script>
-    var version = "V0.08"; // Version number
+    var version = "V0.09"; // Version number
 
     // Function to handle menu item clicks
     function displayMenuItem(item) {
@@ -164,6 +164,9 @@
     window.onload = function() {
       document.title = "Larry's Predictions " + version; // Update the title with the version number
       fetchCSVFile();
+      // Set initial content for iframe
+      var initialContent = "<p style='font-weight: bold; font-size: 20px; text-align: center;'>Chart for Buys Only will show here</p>";
+      document.getElementById('content-frame').srcdoc = initialContent;
     };
   </script>
 </head>
@@ -172,9 +175,7 @@
   <div id="subtitle">In development - will be changing and may not always be up to date yet.</div>
   <ul id="menu"></ul>
   <div id="content">
-    <iframe id="content-frame" src="about:blank" width="90%" height="600px" style="border:3px solid black; padding-top: 10px;">
-      <p style="font-weight: bold; font-size: 20px; text-align: center;">Chart for Buys Only will show here</p>
-    </iframe>
+    <iframe id="content-frame" src="about:blank" width="90%" height="600px" style="border:3px solid black; padding-top: 10px;"></iframe>
   </div>
   <script>
     // Display version number
