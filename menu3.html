@@ -61,7 +61,7 @@
     }
   </style>
   <script>
-    var version = "V0.09"; // Version number
+    var version = "V0.05"; // Version number
 
     // Function to handle menu item clicks
     function displayMenuItem(item) {
@@ -173,9 +173,18 @@
       var initialContent1 = "<p style='font-weight: bold; font-size: 20px; text-align: center;'>Chart for Buys Only will show here</p>";
       var initialContent2 = "<p style='font-weight: bold; font-size: 20px; text-align: center;'>Chart for Sells Only will show here</p>";
       var initialContent3 = "<p style='font-weight: bold; font-size: 20px; text-align: center;'>Charts for both Buy and Sells will show here</p>";
-      document.getElementById('content-frame').srcdoc = initialContent1;
-      document.getElementById('content-frame2').srcdoc = initialContent2;
-      document.getElementById('content-frame3').srcdoc = initialContent3;
+      document.getElementById('content-frame').src = "about:blank";
+      document.getElementById('content-frame2').src = "about:blank";
+      document.getElementById('content-frame3').src = "about:blank";
+      document.getElementById('content-frame').onload = function() {
+        this.contentDocument.body.innerHTML = initialContent1;
+      };
+      document.getElementById('content-frame2').onload = function() {
+        this.contentDocument.body.innerHTML = initialContent2;
+      };
+      document.getElementById('content-frame3').onload = function() {
+        this.contentDocument.body.innerHTML = initialContent3;
+      };
     };
   </script>
 </head>
@@ -184,9 +193,9 @@
   <div id="subtitle">In development - will be changing and may not always be up to date yet.</div>
   <ul id="menu"></ul>
   <div id="content">
-    <iframe id="content-frame" src="about:blank" width="90%" height="400px" style="border:3px solid black; padding-top: 10px;"></iframe>
-    <iframe id="content-frame2" src="about:blank" width="90%" height="400px" style="border:3px solid black; padding-top: 10px;"></iframe>
-    <iframe id="content-frame3" src="about:blank" width="90%" height="400px" style="border:3px solid black; padding-top: 10px;"></iframe>
+    <iframe id="content-frame" width="90%" height="400px" style="border:3px solid black; padding-top: 10px;"></iframe>
+    <iframe id="content-frame2" width="90%" height="400px" style="border:3px solid black; padding-top: 10px;"></iframe>
+    <iframe id="content-frame3" width="90%" height="400px" style="border:3px solid black; padding-top: 10px;"></iframe>
   </div>
   <script>
     // Display version number
