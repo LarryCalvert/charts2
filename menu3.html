@@ -61,7 +61,7 @@
     }
   </style>
   <script>
-    var version = "V0.05"; // Version number
+    var version = "V0.01"; // Version number
 
     // Function to handle menu item clicks
     function displayMenuItem(item) {
@@ -176,6 +176,12 @@
     // Load the CSV file when the page is loaded
     window.onload = function() {
       document.title = "Larry's Predictions " + version; // Update the title with the version number
+
+      // Set titles for iframes
+      document.getElementById('content-frame').textContent = "Buys Only";
+      document.getElementById('content-frame2').textContent = "Sells Only";
+      document.getElementById('content-frame3').textContent = "Both Buys and Sells";
+
       fetchCSVFile();
     };
   </script>
@@ -185,9 +191,9 @@
   <div id="subtitle">In development - will be changing and may not always be up to date yet.</div>
   <ul id="menu"></ul>
   <div id="content">
-    <iframe id="content-frame" src="about:blank" width="90%" height="400px" style="border:3px solid black; padding-top: 10px;">Buys Only</iframe>
-    <iframe id="content-frame2" src="about:blank" width="90%" height="400px" style="border:3px solid black; padding-top: 10px;">Sells Only</iframe>
-    <iframe id="content-frame3" src="about:blank" width="90%" height="400px" style="border:3px solid black; padding-top: 10px;">Both Buys and Sells</iframe>
+    <iframe id="content-frame" src="about:blank" width="90%" height="400px" style="border:3px solid black; padding-top: 10px;"></iframe>
+    <iframe id="content-frame2" src="about:blank" width="90%" height="400px" style="border:3px solid black; padding-top: 10px;"></iframe>
+    <iframe id="content-frame3" src="about:blank" width="90%" height="400px" style="border:3px solid black; padding-top: 10px;"></iframe>
   </div>
   <script>
     // Display version number
