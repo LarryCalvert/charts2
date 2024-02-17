@@ -9,6 +9,7 @@
     }
     #title {
       font-size: 24px;
+      font-weight: bold; /* Make the title bold */
       margin-bottom: 10px;
     }
     #subtitle {
@@ -76,8 +77,8 @@
       for (var i = 0; i < lines.length; i++) {
         var fields = lines[i].split(',');
         var dropdownItem = document.createElement('a');
-        dropdownItem.textContent = fields[0];
-        dropdownItem.setAttribute('data-url', fields[1] + '-buy.html');
+        dropdownItem.textContent = fields[0]; // Display the first column
+        dropdownItem.setAttribute('data-url', fields[1]); // Use the second column as data-url
         dropdownItem.addEventListener('click', function() {
           displayDropdownItem(this);
         });
@@ -154,7 +155,7 @@
   </script>
 </head>
 <body>
-  <div id="title">Larry's Predictions</div>
+  <div id="title"><strong>Larry's Predictions</strong></div> <!-- Make the title bold -->
   <div id="subtitle">In development - will be changing and may not always be up to date yet.</div>
   <ul id="menu"></ul>
   <div id="content">
