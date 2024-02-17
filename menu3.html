@@ -61,7 +61,7 @@
     }
   </style>
   <script>
-    var version = "V0.01"; // Version number
+    var version = "V0.02"; // Version number
 
     // Function to handle menu item clicks
     function displayMenuItem(item) {
@@ -176,11 +176,6 @@
     // Load the CSV file when the page is loaded
     window.onload = function() {
       document.title = "Larry's Predictions " + version; // Update the title with the version number
-
-      // Set titles for iframes
-      document.getElementById('content-frame').textContent = "Buys Only";
-      document.getElementById('content-frame2').textContent = "Sells Only";
-      document.getElementById('content-frame3').textContent = "Both Buys and Sells";
 
       fetchCSVFile();
     };
