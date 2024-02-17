@@ -61,7 +61,7 @@
     }
   </style>
   <script>
-    var version = "V0.03"; // Version number
+    var version = "V0.12"; // Version number
 
     // Function to handle menu item clicks
     function displayMenuItem(item) {
@@ -170,6 +170,8 @@
           for (var j = 0; j < iframes.length; j++) {
             if (iframes[j].contentDocument && !iframes[j].src.includes('about:blank')) { // Check if iframe has loaded content
               iframes[j].contentDocument.write('<div style="font-weight: bold; font-size: larger; text-align: center;">' + initialText + '</div>');
+            } else {
+              iframes[j].src = "about:blank"; // Set iframe src to about:blank if no content
             }
           }
         }
