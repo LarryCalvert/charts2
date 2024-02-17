@@ -61,7 +61,7 @@
     }
   </style>
   <script>
-    var version = "V0.06"; // Version number
+    var version = "V0.10"; // Version number
 
     // Function to handle menu item clicks
     function displayMenuItem(item) {
@@ -77,14 +77,16 @@
       var iframe1 = document.getElementById('content-frame');
       var iframe2 = document.getElementById('content-frame2');
       var iframe3 = document.getElementById('content-frame3');
-      if (iframe1.src === "about:blank") {
-        iframe1.src = item.getAttribute('data-url');
-      }
-      if (iframe2.src === "about:blank") {
-        iframe2.src = item.getAttribute('data-url');
-      }
-      if (iframe3.src === "about:blank") {
-        iframe3.src = item.getAttribute('data-url');
+      var dataUrl = item.getAttribute('data-url');
+      if (dataUrl) {
+        var urls = dataUrl.split(',');
+        iframe1.src = urls[0].trim() || "about:blank";
+        iframe2.src = urls[1].trim() || "about:blank";
+        iframe3.src = urls[2].trim() || "about:blank";
+      } else {
+        iframe1.src = "about:blank";
+        iframe2.src = "about:blank";
+        iframe3.src = "about:blank";
       }
     }
 
@@ -95,8 +97,8 @@
       for (var i = 0; i < lines.length; i++) {
         var fields = lines[i].split(',');
         var dropdownItem = document.createElement('a');
-        dropdownItem.textContent = fields[0]; // Display the first column
-        dropdownItem.setAttribute('data-url', fields[1]); // Use the second column as data-url
+        dropdownItem.textContent = fields[0]; // Display the description
+        dropdownItem.setAttribute('data-url', fields.slice(1).join(',')); // Use remaining columns as data-url
         dropdownItem.addEventListener('click', function() {
           displayDropdownItem(this);
         });
@@ -175,28 +177,6 @@
     window.onload = function() {
       document.title = "Larry's Predictions " + version; // Update the title with the version number
       fetchCSVFile();
-      // Set initial content for iframes
-      var initialContent1 = "<p style='font-weight: bold; font-size: 20px; text-align: center;'>Chart for Buys Only will show here</p>";
-      var initialContent2 = "<p style='font-weight: bold; font-size: 20px; text-align: center;'>Chart for Sells Only will show here</p>";
-      var initialContent3 = "<p style='font-weight: bold; font-size: 20px; text-align: center;'>Charts for both Buy and Sells will show here</p>";
-      document.getElementById('content-frame').src = "about:blank";
-      document.getElementById('content-frame2').src = "about:blank";
-      document.getElementById('content-frame3').src = "about:blank";
-      document.getElementById('content-frame').onload = function() {
-        if (this.contentDocument.body.innerHTML.trim() === "") {
-          this.contentDocument.body.innerHTML = initialContent1;
-        }
-      };
-      document.getElementById('content-frame2').onload = function() {
-        if (this.contentDocument.body.innerHTML.trim() === "") {
-          this.contentDocument.body.innerHTML = initialContent2;
-        }
-      };
-      document.getElementById('content-frame3').onload = function() {
-        if (this.contentDocument.body.innerHTML.trim() === "") {
-          this.contentDocument.body.innerHTML = initialContent3;
-        }
-      };
     };
   </script>
 </head>
