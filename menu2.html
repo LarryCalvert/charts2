@@ -94,7 +94,7 @@
           if (xhr.status === 200) {
             populateDropdown(xhr.responseText, dropdown);
           } else {
-            console.error('Failed to fetch CSV file: ' + csvfile + " " + xhr.status);
+            console.error('Failed to fetch CSV file: ' + xhr.status);
           }
         }
       };
@@ -110,6 +110,7 @@
       // Iterate over the lines and create menu items
       for (var i = 0; i < lines.length; i++) {
         var fields = lines[i].split(',');
+        console.log(fields[0]); // Log the first column
         var menuItem = document.createElement('li');
         menuItem.textContent = fields[0];
         menuItem.classList.add('menu-item');
