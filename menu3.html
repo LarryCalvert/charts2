@@ -61,7 +61,7 @@
     }
   </style>
   <script>
-    var version = "V0.02"; // Version number
+    var version = "V0.08"; // Version number
 
     // Function to handle menu item clicks
     function displayMenuItem(item) {
@@ -173,11 +173,28 @@
       xhr.send();
     }
 
+    // Function to open iframe in a new tab
+    function openIframeInNewTab(iframeId) {
+      var iframe = document.getElementById(iframeId);
+      if (iframe && iframe.src && iframe.src !== 'about:blank') {
+        window.open(iframe.src, '_blank', 'fullscreen=yes');
+      }
+    }
+
     // Load the CSV file when the page is loaded
     window.onload = function() {
       document.title = "Larry's Predictions " + version; // Update the title with the version number
 
       fetchCSVFile();
+
+      // Add event listener to each iframe button to open iframe in a new tab
+      var iframeButtons = document.querySelectorAll('.iframe-button');
+      iframeButtons.forEach(function(button) {
+        var iframeId = button.getAttribute('data-iframe');
+        button.addEventListener('click', function() {
+          openIframeInNewTab(iframeId);
+        });
+      });
     };
   </script>
 </head>
@@ -186,8 +203,11 @@
   <div id="subtitle">In development - will be changing and may not always be up to date yet.</div>
   <ul id="menu"></ul>
   <div id="content">
+    <button class="iframe-button" data-iframe="content-frame">Open in New Tab</button>
     <iframe id="content-frame" src="about:blank" width="90%" height="400px" style="border:3px solid black; padding-top: 10px;"></iframe>
+    <button class="iframe-button" data-iframe="content-frame2">Open in New Tab</button>
     <iframe id="content-frame2" src="about:blank" width="90%" height="400px" style="border:3px solid black; padding-top: 10px;"></iframe>
+    <button class="iframe-button" data-iframe="content-frame3">Open in New Tab</button>
     <iframe id="content-frame3" src="about:blank" width="90%" height="400px" style="border:3px solid black; padding-top: 10px;"></iframe>
   </div>
   <script>
