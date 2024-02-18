@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Larry's Predictions</title>
+  <style>
+    /* Styling for the page */
+    body {
+      text-align: center; /* Center align the content */
+    }
+    #title {
+      font-size: 24px;
+      font-weight: bold; /* Make the title bold */
+      margin-bottom: 10px;
+    }
+    #subtitle {
+      font-style: italic;
+      margin-bottom: 20px;
+    }
+
+    /* Styling for the menu */
+    #menu {
+      list-style-type: none;
+      margin: 0;
+      padding: 0;
+      display: flex; /* Display menu items horizontally */
+      flex-wrap: wrap; /* Wrap items to next line if needed */
+      justify-content: center; /* Center align menu items */
+    }
+    .menu-item {
+      cursor: pointer;
+      padding: 5px;
+      background-color: #f1f1f1;
+      margin-right: 5px; /* Add spacing between menu items */
+      margin-bottom: 5px; /* Add some vertical spacing */
+      position: relative; /* Make the dropdown position relative */
+    }
+    .menu-item:hover {
+      background-color: #ddd;
+    }
+    .menu-item.selected {
+      background-color: #b3d9ff;
+    }
+    .dropdown-content {
+      display: none;
+      position: absolute;
+      top: 100%; /* Position the dropdown below the menu item */
+      left: 0;
+      background-color: #f9f9f9;
+      min-width: 160px;
+      box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+      z-index: 1;
+    }
+    .dropdown-content a {
+      color: black;
+      padding: 12px 16px;
+      text-decoration: none;
+      display: block;
+    }
+    .dropdown-content a:hover {
+      background-color: #ddd;
+    }
+  </style>
+  <script>
+    var version = "V0.08"; // Version number
+
+    // Function to handle menu item clicks
+    function displayMenuItem(item) {
+      var dropdown = item.querySelector('.dropdown-content'); // Find the dropdown within the menu item
+      if (dropdown) {
+        dropdown.style.display = dropdown.style.display === "block" ? "none" : "block";
+        item.classList.toggle("selected");
+      }
+    }
+
+    // Function to handle dropdown item clicks
+    function displayDropdownItem(item) {
+      var iframe1 = document.getElementById('content-frame');
+      var iframe2 = document.getElementById('content-frame2');
+      var iframe3 = document.getElementById('content-frame3');
+      var dataUrl = item.getAttribute('data-url');
+      if (dataUrl) {
+        var urls = dataUrl.split(',');
+        iframe1.src = urls[0].trim() || "about:blank";
+        iframe2.src = urls[1].trim() || "about:blank";
+        iframe3.src = urls[2].trim() || "about:blank";
+      } else {
+        iframe1.src = "about:blank";
+        iframe2.src = "about:blank";
+        iframe3.src = "about:blank";
+      }
+    }
+
+    // Function to read the CSV file and populate the dropdown menu
+    function populateDropdown(csvData, dropdown) {
+      var lines = csvData.split('\n');
+      // Iterate over the lines and create dropdown items
+      for (var i = 0; i < lines.length; i++) {
+        var fields = lines[i].split(',');
+        var dropdownItem = document.createElement('a');
+        dropdownItem.textContent = fields[0]; // Display the description
+        dropdownItem.setAttribute('data-url', fields.slice(1).join(',')); // Use remaining columns as data-url
+        dropdownItem.addEventListener('click', function() {
+          displayDropdownItem(this);
+        });
+        dropdown.appendChild(dropdownItem);
+      }
+    }
+
+    // Function to fetch the CSV file from the server and populate the dropdown
+    function fetchAndPopulateDropdown(csvFile, dropdown) {
+      var xhr = new XMLHttpRequest();
+      xhr.onreadystatechange = function() {
+        if (xhr.readyState === XMLHttpRequest.DONE) {
+          if (xhr.status === 200) {
+            populateDropdown(xhr.responseText, dropdown);
+          } else {
+            console.error('Failed to fetch CSV file: ' + xhr.status);
+          }
+        }
+      };
+      xhr.open('GET', csvFile, true);
+      xhr.send();
+    }
+
+    // Function to read the CSV file and populate the menu
+    function populateMenu(csvData) {
+      var menu = document.getElementById('menu');
+      var lines = csvData.split('\n');
+
+      // Iterate over the lines and create menu items
+      for (var i = 0; i < lines.length; i++) {
+        var fields = lines[i].split(',');
+        if (fields[0].trim().length >= 3) { // Check if length is greater than or equal to 3
+          console.log(fields[0]); // Log the first column
+          var menuItem = document.createElement('li');
+          menuItem.textContent = fields[0];
+          menuItem.classList.add('menu-item');
+
+          // Create dropdown menu for each menu item
+          var dropdown = document.createElement('div');
+          dropdown.classList.add('dropdown-content');
+          menuItem.appendChild(dropdown);
+
+          // Fetch and populate dropdown menu with data from CSV file
+          var csvFileName = fields[0].trim() + '.csv';
+          console.log("Fetching CSV file for menu item: " + csvFileName); // Debugging
+          fetchAndPopulateDropdown(csvFileName, dropdown);
+
+          // Attach click event listener to each menu item
+          menuItem.addEventListener('click', function() {
+            displayMenuItem(this);
+          });
+
+          // Append the menu item to the menu
+          menu.appendChild(menuItem);
+        }
+      }
+    }
+
+    // Function to fetch the CSV file from the server
+    function fetchCSVFile() {
+      var xhr = new XMLHttpRequest();
+      xhr.onreadystatechange = function() {
+        if (xhr.readyState === XMLHttpRequest.DONE) {
+          if (xhr.status === 200) {
+            populateMenu(xhr.responseText);
+          } else {
+            console.error('Failed to fetch CSV file: ' + xhr.status);
+          }
+        }
+      };
+      xhr.open('GET', 'Groups.csv', true);
+      xhr.send();
+    }
+
+    // Function to open iframe in a new tab
+    function openIframeInNewTab(iframeId) {
+      var iframe = document.getElementById(iframeId);
+      if (iframe && iframe.src && iframe.src !== 'about:blank') {
+        window.open(iframe.src, '_blank', 'fullscreen=yes');
+      }
+    }
+
+    // Load the CSV file when the page is loaded
+    window.onload = function() {
+      document.title = "Larry's Predictions " + version; // Update the title with the version number
+
+      fetchCSVFile();
+
+      // Add event listener to each iframe button to open iframe in a new tab
+      var iframeButtons = document.querySelectorAll('.iframe-button');
+      iframeButtons.forEach(function(button) {
+        var iframeId = button.getAttribute('data-iframe');
+        button.addEventListener('click', function() {
+          openIframeInNewTab(iframeId);
+        });
+      });
+    };
+  </script>
+</head>
+<body>
+  <div id="title"><strong>Larry's Predictions</strong> <span id="version"></span></div> <!-- Make the title bold -->
+  <div id="subtitle">In development - will be changing and may not always be up to date yet.</div>
+  <ul id="menu"></ul>
+  <div id="content">
+    <button class="iframe-button" data-iframe="content-frame">Open in New Tab</button>
+    <iframe id="content-frame" src="about:blank" width="90%" height="400px" style="border:3px solid black; padding-top: 10px;"></iframe>
+    <button class="iframe-button" data-iframe="content-frame2">Open in New Tab</button>
+    <iframe id="content-frame2" src="about:blank" width="90%" height="400px" style="border:3px solid black; padding-top: 10px;"></iframe>
+    <button class="iframe-button" data-iframe="content-frame3">Open in New Tab</button>
+    <iframe id="content-frame3" src="about:blank" width="90%" height="400px" style="border:3px solid black; padding-top: 10px;"></iframe>
+  </div>
+  <script>
+    // Display version number
+    document.getElementById('version').textContent = version;
+  </script>
+</body>
+</html>
