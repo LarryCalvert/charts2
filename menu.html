@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>CSV Menu</title>
+  <style>
+    /* Styling for the menu */
+    #menu {
+      list-style-type: none;
+      margin: 0;
+      padding: 0;
+    }
+    #menu li {
+      cursor: pointer;
+      padding: 5px;
+      background-color: #f1f1f1;
+      margin-bottom: 5px;
+    }
+    #menu li:hover {
+      background-color: #ddd;
+    }
+    #menu li.selected {
+      background-color: #b3d9ff;
+    }
+    #content {
+      margin-top: 10px;
+    }
+  </style>
+  <script>
+    // Function to handle menu item clicks
+    function displayMenuItem(item) {
+      // Set the iframe source to the clicked menu item
+      // window.alert(item.textContent + '.html');
+      document.getElementById('content-frame').src = item.textContent + '.html';
+
+
+      // Remove the 'selected' class from all menu items
+      var menuItems = document.getElementsByClassName('menu-item');
+      for (var i = 0; i < menuItems.length; i++) {
+        menuItems[i].classList.remove('selected');
+      }
+
+      // Add the 'selected' class to the clicked menu item
+      item.classList.add('selected');
+    }
+
+    // Function to read the CSV file and populate the menu
+    function populateMenu(csvData) {
+      var menu = document.getElementById('menu');
+      var lines = csvData.split('\n');
+
+      // Iterate over the lines and create menu items
+      for (var i = 0; i < lines.length; i++) {
+        var fields = lines[i].split(',');
+        var menuItem = document.createElement('li');
+        menuItem.textContent = fields[0];
+
+        // Attach click event listener to each menu item
+        menuItem.addEventListener('click', function() {
+          displayMenuItem(this);
+        });
+
+        // Add a 'menu-item' class for styling
+        menuItem.classList.add('menu-item');
+
+        // Append the menu item to the menu
+        menu.appendChild(menuItem);
+      }
+    }
+
+    // Function to fetch the CSV file from the server
+    function fetchCSVFile() {
+      var xhr = new XMLHttpRequest();
+      xhr.onreadystatechange = function() {
+        if (xhr.readyState === XMLHttpRequest.DONE) {
+          if (xhr.status === 200) {
+            populateMenu(xhr.responseText);
+          } else {
+            console.error('Failed to fetch CSV file: ' + xhr.status);
+          }
+        }
+      };
+      xhr.open('GET', 'menu.csv', true);
+      xhr.send();
+    }
+
+    // Load the CSV file when the page is loaded
+    window.onload = function() {
+      fetchCSVFile();
+    };
+  </script>
+</head>
+<body>
+  <h1>CSV Menu</h1>
+  <ul id="menu"></ul>
+  <div id="content">
+    <iframe id="content-frame" src="" width="90%" height="600px" style="border:3px solid black; padding-top: 10px;"></iframe>
+  </div>
+</body>
+</html>

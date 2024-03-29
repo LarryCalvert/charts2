@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Larry's Predictions</title>
+  <style>
+    /* Styling for the page */
+    body {
+      text-align: center; /* Center align the content */
+    }
+    #title {
+      font-size: 24px;
+      font-weight: bold; /* Make the title bold */
+      margin-bottom: 10px;
+    }
+    #subtitle {
+      font-style: italic;
+      margin-bottom: 20px;
+    }
+
+    /* Styling for the menu */
+    #menu {
+      list-style-type: none;
+      margin: 0;
+      padding: 0;
+      display: flex; /* Display menu items horizontally */
+      flex-wrap: wrap; /* Wrap items to next line if needed */
+      justify-content: center; /* Center align menu items */
+    }
+    .menu-item {
+      cursor: pointer;
+      padding: 5px;
+      background-color: #f1f1f1;
+      margin-right: 5px; /* Add spacing between menu items */
+      margin-bottom: 5px; /* Add some vertical spacing */
+    }
+    .menu-item:hover {
+      background-color: #ddd;
+    }
+    .menu-item.selected {
+      background-color: #b3d9ff;
+    }
+    .dropdown-content {
+      display: none;
+      position: absolute;
+      background-color: #f9f9f9;
+      min-width: 160px;
+      box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+      z-index: 1;
+    }
+    .dropdown-content a {
+      color: black;
+      padding: 12px 16px;
+      text-decoration: none;
+      display: block;
+    }
+    .dropdown-content a:hover {
+      background-color: #ddd;
+    }
+  </style>
+  <script>
+    // Function to handle menu item clicks
+    function displayMenuItem(item) {
+      var dropdown = item.nextElementSibling;
+      dropdown.style.display = dropdown.style.display === "block" ? "none" : "block";
+      item.classList.toggle("selected");
+    }
+
+    // Function to handle dropdown item clicks
+    function displayDropdownItem(item) {
+      document.getElementById('content-frame').src = item.getAttribute('data-url');
+    }
+
+    // Function to read the CSV file and populate the dropdown menu
+    function populateDropdown(csvData, dropdown) {
+      var lines = csvData.split('\n');
+      // Iterate over the lines and create dropdown items
+      for (var i = 0; i < lines.length; i++) {
+        var fields = lines[i].split(',');
+        var dropdownItem = document.createElement('a');
+        dropdownItem.textContent = fields[0]; // Display the first column
+        dropdownItem.setAttribute('data-url', fields[1]); // Use the second column as data-url
+        dropdownItem.addEventListener('click', function() {
+          displayDropdownItem(this);
+        });
+        dropdown.appendChild(dropdownItem);
+      }
+    }
+
+    // Function to fetch the CSV file from the server and populate the dropdown
+    function fetchAndPopulateDropdown(csvFile, dropdown) {
+      var xhr = new XMLHttpRequest();
+      xhr.onreadystatechange = function() {
+        if (xhr.readyState === XMLHttpRequest.DONE) {
+          if (xhr.status === 200) {
+            populateDropdown(xhr.responseText, dropdown);
+          } else {
+            console.error('Failed to fetch CSV file: ' + xhr.status);
+          }
+        }
+      };
+      xhr.open('GET', csvFile, true);
+      xhr.send();
+    }
+
+    // Function to read the CSV file and populate the menu
+    function populateMenu(csvData) {
+      var menu = document.getElementById('menu');
+      var lines = csvData.split('\n');
+
+      // Iterate over the lines and create menu items
+      for (var i = 0; i < lines.length; i++) {
+        var fields = lines[i].split(',');
+        console.log(fields[0]); // Log the first column
+        var menuItem = document.createElement('li');
+        menuItem.textContent = fields[0];
+        menuItem.classList.add('menu-item');
+
+        // Create dropdown menu for each menu item
+        var dropdown = document.createElement('div');
+        dropdown.classList.add('dropdown-content');
+        menuItem.appendChild(dropdown);
+
+        // Fetch and populate dropdown menu with data from CSV file
+        fetchAndPopulateDropdown(fields[0] + '.csv', dropdown);
+
+        // Attach click event listener to each menu item
+        menuItem.addEventListener('click', function() {
+          displayMenuItem(this);
+        });
+
+        // Append the menu item to the menu
+        menu.appendChild(menuItem);
+      }
+    }
+
+    // Function to fetch the CSV file from the server
+    function fetchCSVFile() {
+      var xhr = new XMLHttpRequest();
+      xhr.onreadystatechange = function() {
+        if (xhr.readyState === XMLHttpRequest.DONE) {
+          if (xhr.status === 200) {
+            populateMenu(xhr.responseText);
+          } else {
+            console.error('Failed to fetch CSV file: ' + xhr.status);
+          }
+        }
+      };
+      xhr.open('GET', 'Groups.csv', true);
+      xhr.send();
+    }
+
+    // Load the CSV file when the page is loaded
+    window.onload = function() {
+      fetchCSVFile();
+    };
+  </script>
+</head>
+<body>
+  <div id="title"><strong>Larry's Predictions V0.01</strong></div> <!-- Make the title bold -->
+  <div id="subtitle">In development - will be changing and may not always be up to date yet.</div>
+  <ul id="menu"></ul>
+  <div id="content">
+    <iframe id="content-frame" src="" width="90%" height="600px" style="border:3px solid black; padding-top: 10px;"></iframe>
+  </div>
+</body>
+</html>

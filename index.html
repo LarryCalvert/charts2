@@ -1,0 +1,65 @@
+@@ -1,68 +0,0 @@
+<html>
+<head>
+    <title>Larry's Predictions</title>
+    <style>
+      h1 {
+        text-align: center;
+      }
+       .menu {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        background-color: lightgray;
+        padding: 10px 20px;
+      }
+      .menu a {
+        text-decoration: none;
+        color: black;
+        margin-right: 20px;
+      }
+    </style>
+  </head>
+<body>
+<div class="menu">
+      <a href="#">Settings</a>
+      <a href="#">Predictions</a>
+    </div>
+  <h1>Larry's Predictions</h1>
+  <p>This is a 1 bar (or candlestick) ahead price level predictor for orders.
+     Instructions and explaination below chart.
+  </p>
+  
+  <label for="grain-select">Select a grain: (Wheat only for now)</label>
+  <select id="grain-select">
+    <option value="wheat">Wheat</option>
+    <option value="corn">Corn</option>
+    <option value="oats">Oats</option>
+  </select>
+
+  <iframe style="width: 90%;height: 90%; border:3px solid black; padding-top: 10px;"
+     src="https://larrycalvert.github.io/charts2/wheat.html" id="Iframe">
+  </iframe>
+
+ <h2>Chart Instructions</h2>
+  <p>Select an area to zoom in. Home icon at top right will reset both axes.
+     Click legend items at right to remove and restore traces.
+     The black line (zz) is a simple zigzag indicator - normally not predictive.
+     It will be replaced with a green/red line showing actual trades soon.
+     Note: hpred, lpred, cpred, mpred are 1 bar ahead predictions of high, low, close, and mid respectively.
+     hpred and lpred will set order price levels - click on the legend to have them drawn.
+     Also take a look at cpred (red) mpred (green) crossings to see advance
+     indication of multiple day direction change (trend).
+     I will add candlesticks instead of bars as an option also at some point. I prefer bars.
+     <br>    
+     The LB= stands for LastBar.
+     Make sure it is the last trading day as I have to manually kick off fetch data and run predictions right now.
+     I may not update charts every day as I am developing.
+     I will automate that down the road.
+  </p>
+
+  <p>Predictions made by Larry Calvert - written in R. &nbsp &nbsp &nbsp Copyright 2023</p>
+
+</body>
+</html>
+<! -- END --> 
