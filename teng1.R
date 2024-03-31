@@ -292,7 +292,7 @@ if (0) {
   # retval <- system(cline)
   # print(paste0(cline, " retval=",retval))
   # 
-  # cline <- paste0("git config --global user.name \"LarryCalvert\"")
+  # cline <- paste0("git config --global user.name \"larrycalvert\"")
   # retval <- system(cline)
   # print(paste0(cline, " retval=",retval))
   
@@ -351,14 +351,14 @@ if (GITPUSH == TRUE) {
   # retval <- system(cline)
   # print(paste0(cline, " retval=",retval))
   # 
-  # cline <- paste0("git config --global user.name \"LarryCalvert\"")
+  # cline <- paste0("git config --global user.name \"larrycalvert\"")
   # retval <- system(cline)
   # print(paste0(cline, " retval=",retval))
   # 
   # if (file.exists("./charts2")) { # !!Note CHARTDIR must be same as chart repo
   #    unlink("./charts2", force = TRUE, recursive = TRUE)
   # }
-  # cline <- paste0("git clone https://github.com/LarryCalvert/charts2.git") # Get charts2 repo
+  # cline <- paste0("git clone https://github.com/larrycalvert/charts2.git") # Get charts2 repo
   # retval <- system(cline)
   # print(paste0(cline, " retval=",retval))
 
@@ -367,10 +367,10 @@ if (GITPUSH == TRUE) {
     unlink(CHARTDIR, force = TRUE, recursive = TRUE)
   }
   local_repo_path <- CHARTDIR 
-  remote_repo_url <- "https://github.com/LarryCalvert/charts2.git"
+  remote_repo_url <- "https://github.com/larrycalvert/charts2.git"
   repo <- clone(remote_repo_url, local_repo_path)
   
-  git2r::config(repo, user.name = "LarryCalvert", user.email = "lcalvert@comcast.net")
+  git2r::config(repo, user.name = "larrycalvert", user.email = "lcalvert@comcast.net")
   cred <- cred_token(token = "R_TOKEN")
   
   # if (!file.exists(CHARTDIR)) {
@@ -388,7 +388,7 @@ if (GITPUSH == TRUE) {
   # retval <- system(cline)
   # cat(paste0(cline, "\n retval=",retval))
   
-  # cline <- paste0("git remote add charts2 https://github.com/LarryCalvert/charts2.git")
+  # cline <- paste0("git remote add charts2 https://github.com/larrycalvert/charts2.git")
   # retval <- system(cline)
   # print(paste0(cline, " retval=",retval))
   
@@ -3038,7 +3038,7 @@ for(symrow in 1:nrow(symbol_list )) { # symbol loop
       # })
       
       # push(repo,
-      #        credentials = cred_user_pass( username = "LarryCalvert",
+      #        credentials = cred_user_pass( username = "larrycalvert",
       #        password = "o*Yg*QmyNA64"),
       #        force = TRUE
       #        )
@@ -3049,14 +3049,15 @@ for(symrow in 1:nrow(symbol_list )) { # symbol loop
       token <- Sys.getenv("R_TOKEN")
       cat(paste("Token-",token, " len= ",length(token)))
       
-      #remote_url <- "https://github.com/LarryCalvert/charts2.git"
-      #remote_url <- paste0("https://",token,"@github.com/LarryCalvert/charts2.git")
-      remote_url <- "https://LarryCalvert:token@github.com/larrycalvert/charts2.git"
+      
+      #remote_url <- "https://github.com/larrycalvert/charts2.git"
+      #remote_url <- paste0("https://",token,"@github.com/larrycalvert/charts2.git")
+      remote_url <- "https://larrycalvert:token@github.com/larrycalvert/charts2.git"
       # 
       #cline <- paste0("git remote set-url charts2 ", remote_url)
-      #cline <- paste0("git remote set-url origin https://LarryCalvert@github.com/LarryCalvert/charts2.git")
+      #cline <- paste0("git remote set-url origin https://larrycalvert@github.com/larrycalvert/charts2.git")
       
-      cline <- paste0("git remote set-url origin https://LarryCalvert:",
+      cline <- paste0("git remote set-url origin https://larrycalvert:",
                       token,"@github.com/larrycalvert/charts2.git")
       retval <- system(cline)
       print(paste(cline, " retval=",retval))
@@ -3064,8 +3065,8 @@ for(symrow in 1:nrow(symbol_list )) { # symbol loop
       cline <- paste0("git remote -v")
       retval <- system(cline)
       print(paste(cline, " retval=",retval))
-       
-     
+      
+      
       cline <- paste0("git status")
       retval <- system(cline)
       print(paste(cline, " retval=",retval))
@@ -3089,9 +3090,9 @@ for(symrow in 1:nrow(symbol_list )) { # symbol loop
     # token <- Sys.getenv("R_TOKEN")
     # cat(paste0("Token-",token, " len= ",length(token),"\n"))
     # 
-    # remote_url <- "https://github.com/LarryCalvert/charts2.git"
-    # #remote_url <- paste0("https://",token,"@github.com/LarryCalvert/charts2.git")
-    # #remote_url <- "https://LarryCalvert:token@github.com/larrycalvert/charts2.git"
+    # remote_url <- "https://github.com/larrycalvert/charts2.git"
+    # #remote_url <- paste0("https://",token,"@github.com/larrycalvert/charts2.git")
+    # #remote_url <- "https://larrycalvert:token@github.com/larrycalvert/charts2.git"
     # 
     # cline <- paste0("git remote set-url charts2 ", remote_url)
     # retval <- system(cline)
@@ -3239,7 +3240,7 @@ for(symrow in 1:nrow(symbol_list )) { # symbol loop
       # retval <- system(cline)
       # print(paste0(cline, " retval=",retval))
       # 
-      # # To https://github.com/LarryCalvert/charts2.git
+      # # To https://github.com/larrycalvert/charts2.git
       # cline <- paste0("git push") # This pushes to charts 2 somehow
       # retval <- system(cline)
       # print(paste0(cline, " retval=",retval))
