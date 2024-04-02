@@ -24,8 +24,13 @@ jobs:
       - name: Checkout repository
         uses: actions/checkout@v2
 
+<<<<<<< HEAD
       - name: Install Curl
         run: sudo apt install -y libcurl4-openssl-dev
+=======
+#    - name: Install Curl
+#        run: sudo apt install -y libcurl4-openssl-dev
+>>>>>>> 214b08a (workflow)
 
       - name: Install other dependencies
         run: sudo apt install -y libharfbuzz-dev libfribidi-dev
