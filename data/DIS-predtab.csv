@@ -1,0 +1,5 @@
+symbol,desc,group,dt,pproc,method,zscore
+DIS,Disney,actual,h,none,zlma3,0.9376
+DIS,Disney,actual,l,none,zlma2,1.0184
+DIS,Disney,actual,c,none,zlma2,1.0314
+DIS,Disney,actual,m,none,zlma2,0.9562

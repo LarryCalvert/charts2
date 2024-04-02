@@ -1,0 +1,12 @@
+symbol,tsys,hadj,ladj,bsc,date,dir,bors,mls,type,pos,price,filled,quant,riskmm
+NVDA,M1,0.15,0.05,Buy,24-02-06,-1,Buy,Stop,Entry,1,673.25,TRUE,1,41
+NVDA,M1,0.15,0.05,Buy,24-02-16,-1,Sell,Stop,Target,0,738.5,TRUE,1,NA
+NVDA,M1,0.15,0.05,Buy,24-02-21,-1,Buy,Stop,Entry,1,671.75,TRUE,1,37.08
+NVDA,M1,0.15,0.05,Buy,24-03-08,-1,Sell,Stop,Target,0,960.75,TRUE,1,NA
+NVDA,M1,0.15,0.05,Buy,24-03-18,-1,Buy,Stop,Entry,1,874.5,TRUE,1,14.6
+NVDA,M1,0.15,0.05,Buy,24-03-18,-1,Sell,Stop,Target,0,906,TRUE,1,NA
+NVDA,M1,0.15,0.05,Buy,24-03-19,1,Buy,Stop,Entry,1,860.25,TRUE,1,40.6
+NVDA,M1,0.15,0.05,Buy,24-03-21,-1,Sell,Stop,Target,0,921,TRUE,1,NA
+NVDA,M1,0.15,0.05,Buy,24-03-22,1,Buy,Stop,Entry,1,912,TRUE,1,14.64
+NVDA,M1,0.15,0.05,Buy,24-03-25,1,Sell,Stop,Target,0,956.75,TRUE,1,NA
+NVDA,M1,0.15,0.05,Buy,24-03-28,1,Buy,Stop,Entry,1,901.5,TRUE,1,38.28

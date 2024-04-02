@@ -1,0 +1,5 @@
+symbol,group,dt,pproc,method,etime,mean,sd,zscore
+SMCI,actual,h,none,zlma2,19.6901,-1.4756,78.6689,1.0734
+SMCI,actual,l,none,zlma3,21.1234,-0.0607,54.2088,1.0665
+SMCI,actual,c,none,zlma1,10.7204,-0.6669,62.9828,1.1218
+SMCI,actual,m,none,zlma1,10.3835,-0.2003,64.5199,1.0733

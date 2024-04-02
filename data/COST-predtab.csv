@@ -1,0 +1,5 @@
+symbol,desc,group,dt,pproc,method,zscore
+COST,Costco,actual,h,none,mstl3,0.9408
+COST,Costco,actual,l,none,mstl2,0.9007
+COST,Costco,actual,c,none,mstl1,0.8695
+COST,Costco,actual,m,none,mstl2,0.9221

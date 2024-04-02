@@ -1,0 +1,7 @@
+symbol,tsys,tsrow,hadj,ladj,endate,enbors,enprice,entype,enquant,psprice,riskmm,exdate,exbors,exprice,extype,plmm,pldol,win,lose,pos,bars
+NVDA,M1,NA,0.15,0.05,24-02-06,Buy,673.25,Entry,1,663,41,24-02-16,Sell,738.5,Target,65.25,3262.5,1,0,0,9
+NVDA,M1,NA,0.15,0.05,24-02-21,Buy,671.75,Entry,1,662.48,37.08,24-03-08,Sell,960.75,Target,289,14450,1,0,0,13
+NVDA,M1,NA,0.15,0.05,24-03-18,Buy,874.5,Entry,1,870.85,14.6,24-03-18,Sell,906,Target,31.5,1575,1,0,0,1
+NVDA,M1,NA,0.15,0.05,24-03-19,Buy,860.25,Entry,1,850.1,40.6,24-03-21,Sell,921,Target,60.75,3037.5,1,0,0,3
+NVDA,M1,NA,0.15,0.05,24-03-22,Buy,912,Entry,1,908.34,14.64,24-03-25,Sell,956.75,Target,44.75,2237.5,1,0,0,2
+NVDA,M1,NA,0.15,0.05,24-03-28,Buy,901.5,Entry,1,891.93,38.28,NA,NA,NA,NA,NA,NA,NA,NA,1,2

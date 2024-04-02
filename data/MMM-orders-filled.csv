@@ -1,0 +1,15 @@
+symbol,tsys,hadj,ladj,bsc,date,dir,bors,mls,type,pos,price,filled,quant,riskmm
+MMM,M1,-0.15,-0.1,Buy,24-02-01,1,Buy,Stop,Entry,1,94.25,TRUE,1,1.24
+MMM,M1,-0.15,-0.1,Buy,24-02-01,1,Sell,Stop,Target,0,96,TRUE,1,NA
+MMM,M1,-0.15,-0.1,Buy,24-02-06,1,Buy,Stop,Entry,1,93,TRUE,1,2.4
+MMM,M1,-0.15,-0.1,Buy,24-02-07,-1,Sell,Stop,Target,0,94,TRUE,1,NA
+MMM,M1,-0.15,-0.1,Buy,24-02-08,-1,Buy,Stop,Entry,1,93,TRUE,1,1.16
+MMM,M1,-0.15,-0.1,Buy,24-02-08,-1,Sell,Stop,Target,0,94.25,TRUE,1,NA
+MMM,M1,-0.15,-0.1,Buy,24-02-13,-1,Buy,Stop,Entry,1,92.5,TRUE,1,4.44
+MMM,M1,-0.15,-0.1,Buy,24-02-20,1,Sell,Stop,Target,0,92.25,TRUE,1,NA
+MMM,M1,-0.15,-0.1,Buy,24-02-21,1,Buy,Stop,Entry,1,91,TRUE,1,0.08
+MMM,M1,-0.15,-0.1,Buy,24-03-05,1,Sell,Stop,Target,0,92.75,TRUE,1,NA
+MMM,M1,-0.15,-0.1,Buy,24-03-07,-1,Buy,Stop,Entry,1,92.25,TRUE,1,0.56
+MMM,M1,-0.15,-0.1,Buy,24-03-18,1,Sell,Stop,Target,0,105.75,TRUE,1,NA
+MMM,M1,-0.15,-0.1,Buy,24-03-20,1,Buy,Stop,Entry,1,104.5,TRUE,1,0.24
+MMM,M1,-0.15,-0.1,Buy,24-03-22,-1,Sell,Stop,Target,0,108,TRUE,1,NA

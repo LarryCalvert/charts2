@@ -1,0 +1,5 @@
+symbol,group,dt,pproc,method,etime,mean,sd,zscore
+MMM,actual,h,none,zlma2,19.2067,0.0395,1.2078,0.9904
+MMM,actual,l,none,zlma1,12.987,0.0411,1.0426,1.0591
+MMM,actual,c,none,mstl1,5.4843,0.046,1.8238,1.0165
+MMM,actual,m,none,zlma1,11.3165,0.037,1.0317,1.0264

@@ -1,0 +1,5 @@
+symbol,desc,group,dt,pproc,method,zscore
+MMM,3M Co,actual,h,none,zlma2,0.9904
+MMM,3M Co,actual,l,none,zlma1,1.0591
+MMM,3M Co,actual,c,none,mstl1,1.0165
+MMM,3M Co,actual,m,none,zlma1,1.0264

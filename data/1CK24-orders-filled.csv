@@ -1,0 +1,11 @@
+symbol,tsys,hadj,ladj,bsc,date,dir,bors,mls,type,pos,price,filled,quant,riskmm
+1CK24,M1,0.05,0.35,Buy,24-02-16,-1,Buy,Stop,Entry,1,428,TRUE,1,1
+1CK24,M1,0.05,0.35,Buy,24-02-21,-1,Sell,Stop,Target,0,429.5,TRUE,1,NA
+1CK24,M1,0.05,0.35,Buy,24-02-23,-1,Buy,Stop,Entry,1,412.5,TRUE,1,3
+1CK24,M1,0.05,0.35,Buy,24-02-29,1,Sell,Stop,Target,0,431,TRUE,1,NA
+1CK24,M1,0.05,0.35,Buy,24-03-01,-1,Buy,Stop,Entry,1,424.5,TRUE,1,10
+1CK24,M1,0.05,0.35,Buy,24-03-04,1,Sell,Stop,Target,0,431.75,TRUE,1,NA
+1CK24,M1,0.05,0.35,Buy,24-03-06,1,Buy,Stop,Entry,1,423.75,TRUE,1,2
+1CK24,M1,0.05,0.35,Buy,24-03-11,1,Sell,Stop,Target,0,441.75,TRUE,1,NA
+1CK24,M1,0.05,0.35,Buy,24-03-18,-1,Buy,Stop,Entry,1,435.5,TRUE,1,6
+1CK24,M1,0.05,0.35,Buy,24-03-18,-1,Sell,Stop,Target,0,439.5,TRUE,1,NA

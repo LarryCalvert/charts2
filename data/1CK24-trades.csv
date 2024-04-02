@@ -1,0 +1,6 @@
+symbol,tsys,tsrow,hadj,ladj,endate,enbors,enprice,entype,enquant,psprice,riskmm,exdate,exbors,exprice,extype,plmm,pldol,win,lose,pos,bars
+1CK24,M1,NA,0.05,0.35,24-02-16,Buy,428,Entry,1,427.75,1,24-02-21,Sell,429.5,Target,1.5,75,1,0,0,3
+1CK24,M1,NA,0.05,0.35,24-02-23,Buy,412.5,Entry,1,411.75,3,24-02-29,Sell,431,Target,18.5,925,1,0,0,5
+1CK24,M1,NA,0.05,0.35,24-03-01,Buy,424.5,Entry,1,422,10,24-03-04,Sell,431.75,Target,7.25,362.5,1,0,0,2
+1CK24,M1,NA,0.05,0.35,24-03-06,Buy,423.75,Entry,1,423.25,2,24-03-11,Sell,441.75,Target,18,900,1,0,0,4
+1CK24,M1,NA,0.05,0.35,24-03-18,Buy,435.5,Entry,1,434,6,24-03-18,Sell,439.5,Target,4,200,1,0,0,1
