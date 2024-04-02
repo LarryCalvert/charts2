@@ -49,7 +49,7 @@ TUNE_TRADES <- FALSE  # Limited tune if FALSE quicker
 ## L2SCORE <- FALSE # Force L2 score, plot, and push even if data hasn't changed
 # L2TUNE <- FALSE # Force L2 tune even if data hasn't changed
 
-L2FORCE <- FALSE # Force scoring and L2 predict and charts
+L2FORCE <- TRUE # Force scoring and L2 predict and charts
 L2ERRP  <- FALSE # PREDICT L2 error
 DEBUG   <- FALSE
 
