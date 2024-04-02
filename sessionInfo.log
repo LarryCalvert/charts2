@@ -1,0 +1,75 @@
+R version 4.3.3 (2024-02-29 ucrt)
+Platform: x86_64-w64-mingw32/x64 (64-bit)
+Running under: Windows 10 x64 (build 19045)
+
+Matrix products: default
+
+
+locale:
+[1] LC_COLLATE=English_United States.utf8 
+[2] LC_CTYPE=English_United States.utf8   
+[3] LC_MONETARY=English_United States.utf8
+[4] LC_NUMERIC=C                          
+[5] LC_TIME=English_United States.utf8    
+
+time zone: America/Los_Angeles
+tzcode source: internal
+
+attached base packages:
+[1] parallel  grid      stats     graphics  grDevices utils     datasets 
+[8] methods   base     
+
+other attached packages:
+ [1] pandoc_0.2.0               stringr_1.5.0             
+ [3] tidyjson_0.3.2             rjson_0.2.21              
+ [5] tidyquant_1.0.7            quantmod_0.4.22           
+ [7] PerformanceAnalytics_2.0.4 xts_0.13.1                
+ [9] zoo_1.8-12                 Metrics_0.1.4             
+[11] itsmr_1.10                 mFilter_0.1-5             
+[13] smooth_3.2.0               greybox_1.0.8             
+[15] spectral_2.0               pbapply_1.7-0             
+[17] RhpcBLASctl_0.23-42        lattice_0.22-5            
+[19] rasterImage_0.4.0          plotrix_3.8-2             
+[21] Rlibeemd_1.4.2             bestNormalize_1.9.0       
+[23] KernSmooth_2.23-21         tidyr_1.3.0               
+[25] TTR_0.24.3                 htmlwidgets_1.6.2         
+[27] plotly_4.10.1              ggplot2_3.4.2             
+[29] forecastHybrid_5.0.19      thief_0.3                 
+[31] forecast_8.21              tibble_3.2.1              
+[33] lubridate_1.9.2            readr_2.1.4               
+[35] dplyr_1.1.2                log4r_0.4.3               
+[37] pracma_2.4.2               curl_5.0.0                
+[39] conflicted_1.2.0          
+
+loaded via a namespace (and not attached):
+ [1] rstudioapi_0.14     jsonlite_1.8.4      magrittr_2.0.3     
+ [4] rmarkdown_2.21      nloptr_2.0.3        fs_1.6.2           
+ [7] vctrs_0.6.2         memoise_2.0.1       butcher_0.3.2      
+[10] htmltools_0.5.5     parallelly_1.35.0   cachem_1.0.8       
+[13] lifecycle_1.0.3     iterators_1.0.14    pkgconfig_2.0.3    
+[16] Matrix_1.6-5        R6_2.5.1            fastmap_1.1.1      
+[19] future_1.32.0       digest_0.6.31       colorspace_2.1-0   
+[22] crosstalk_1.2.0     fansi_1.0.4         timechange_0.2.0   
+[25] httr_1.4.6          compiler_4.3.3      rngtools_1.5.2     
+[28] bit64_4.0.5         withr_2.5.0         doParallel_1.0.17  
+[31] tseries_0.10-54     Quandl_2.11.0       MASS_7.3-60.0.1    
+[34] lava_1.7.2.1        rappdirs_0.3.3      tools_4.3.3        
+[37] lmtest_0.9-40       future.apply_1.10.0 nnet_7.3-19        
+[40] glue_1.6.2          quadprog_1.5-8      nlme_3.1-164       
+[43] generics_0.1.3      recipes_1.0.6       gtable_0.3.3       
+[46] tzdb_0.4.0          class_7.3-22        data.table_1.14.8  
+[49] hms_1.1.3           xml2_1.3.4          utf8_1.2.3         
+[52] foreach_1.5.2       pillar_1.9.0        vroom_1.6.3        
+[55] splines_4.3.3       survival_3.5-8      bit_4.0.5          
+[58] tidyselect_1.2.0    knitr_1.42          urca_1.3-3         
+[61] xfun_0.39           texreg_1.38.6       statmod_1.5.0      
+[64] hardhat_1.3.0       timeDate_4022.108   stringi_1.7.12     
+[67] yaml_2.3.7          lazyeval_0.2.2      pacman_0.5.1       
+[70] evaluate_0.21       codetools_0.2-19    cli_3.6.1          
+[73] rpart_4.1.23        xtable_1.8-4        munsell_0.5.0      
+[76] Rcpp_1.0.10         globals_0.16.2      ellipsis_0.3.2     
+[79] fracdiff_1.5-2      gower_1.0.1         assertthat_0.2.1   
+[82] doRNG_1.8.6         listenv_0.9.0       viridisLite_0.4.2  
+[85] ipred_0.9-14        scales_1.2.1        prodlim_2023.03.31 
+[88] purrr_1.0.1         crayon_1.5.2        rlang_1.1.1        
+[91] rvest_1.0.3        

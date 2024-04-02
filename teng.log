@@ -1,0 +1,200 @@
+INFO  [2024-04-02 00:00:36] ******************************************************
+INFO  [2024-04-02 00:00:36] ******************************************************
+INFO  [2024-04-02 00:00:36] L1_main Start teng1 V0.33 03/25/2024 2024-04-02 00:00:36.392646
+INFO  [2024-04-02 00:00:36] Files in: C:\Users\Lcalv\Documents\R\teng5/charts2
+
+INFO  [2024-04-02 00:00:36] Commodities.csv 
+corn.html 
+cost.html 
+dis.html 
+Futures.csv 
+Group1.csv 
+Groups.csv 
+index.html 
+menu.csv 
+menu.html 
+menu2.html 
+menu3.html 
+menu4.html 
+meta.html 
+mmm.html 
+nvda.html 
+oats.html 
+README.md 
+smci.html 
+Stocks.csv 
+wheat.html 
+wheat.txt 
+wheat_files 
+
+INFO  [2024-04-02 00:00:36] Files in: ./data
+
+INFO  [2024-04-02 00:00:36] $BEST.csv 
+1CK24-best.csv 
+1CK24-orders-filled.csv 
+1CK24-orders.csv 
+1CK24-predtab.csv 
+1CK24-score1.csv 
+1CK24-score2.csv 
+1CK24-score3.csv 
+1CK24-score4.csv 
+1CK24-score5.csv 
+1CK24-score7-c.csv 
+1CK24-score7-h.csv 
+1CK24-score7-l.csv 
+1CK24-score7-m.csv 
+1CK24-summary.csv 
+1CK24-trades.csv 
+1OK24-best.csv 
+1OK24-orders-filled.csv 
+1OK24-orders.csv 
+1OK24-predtab.csv 
+1OK24-score1.csv 
+1OK24-score2.csv 
+1OK24-score3.csv 
+1OK24-score4.csv 
+1OK24-score5.csv 
+1OK24-score6.csv 
+1OK24-score7-c.csv 
+1OK24-score7-h.csv 
+1OK24-score7-l.csv 
+1OK24-score7-m.csv 
+1OK24-summary.csv 
+1OK24-trades.csv 
+1WK24-$Detail.csv 
+1WK24-best.csv 
+1WK24-orders-filled.csv 
+1WK24-orders.csv 
+1WK24-predtab.csv 
+1WK24-score1.csv 
+1WK24-score2.csv 
+1WK24-score3.csv 
+1WK24-score4.csv 
+1WK24-score5.csv 
+1WK24-score7-c.csv 
+1WK24-score7-h.csv 
+1WK24-score7-l.csv 
+1WK24-score7-m.csv 
+1WK24-summary.csv 
+1WK24-trades.csv 
+COST-best.csv 
+COST-orders-filled.csv 
+COST-orders.csv 
+COST-predtab.csv 
+COST-score1.csv 
+COST-score2.csv 
+COST-score3.csv 
+COST-score4.csv 
+COST-score5.csv 
+COST-score7-c.csv 
+COST-score7-h.csv 
+COST-score7-l.csv 
+COST-score7-m.csv 
+COST-summary.csv 
+COST-trades.csv 
+DIS-best.csv 
+DIS-orders-filled.csv 
+DIS-orders.csv 
+DIS-predtab.csv 
+DIS-score1.csv 
+DIS-score2.csv 
+DIS-score3.csv 
+DIS-score4.csv 
+DIS-score5.csv 
+DIS-score7-c.csv 
+DIS-score7-h.csv 
+DIS-score7-l.csv 
+DIS-score7-m.csv 
+DIS-summary.csv 
+DIS-trades.csv 
+META-best.csv 
+META-orders-filled.csv 
+META-orders.csv 
+META-predtab.csv 
+META-score1.csv 
+META-score2.csv 
+META-score3.csv 
+META-score4.csv 
+META-score5.csv 
+META-score7-c.csv 
+META-score7-h.csv 
+META-score7-l.csv 
+META-score7-m.csv 
+META-summary.csv 
+META-trades.csv 
+MMM-best.csv 
+MMM-orders-filled.csv 
+MMM-orders.csv 
+MMM-predtab.csv 
+MMM-score1.csv 
+MMM-score2.csv 
+MMM-score3.csv 
+MMM-score4.csv 
+MMM-score5.csv 
+MMM-score7-c.csv 
+MMM-score7-h.csv 
+MMM-score7-l.csv 
+MMM-score7-m.csv 
+MMM-summary.csv 
+MMM-trades.csv 
+NVDA-best.csv 
+NVDA-orders-filled.csv 
+NVDA-orders.csv 
+NVDA-predtab.csv 
+NVDA-score1.csv 
+NVDA-score2.csv 
+NVDA-score3.csv 
+NVDA-score4.csv 
+NVDA-score5.csv 
+NVDA-score7-c.csv 
+NVDA-score7-h.csv 
+NVDA-score7-l.csv 
+NVDA-score7-m.csv 
+NVDA-summary.csv 
+NVDA-trades.csv 
+SMCI-best.csv 
+SMCI-orders-filled.csv 
+SMCI-orders.csv 
+SMCI-predtab.csv 
+SMCI-score1.csv 
+SMCI-score2.csv 
+SMCI-score3.csv 
+SMCI-score4.csv 
+SMCI-score5.csv 
+SMCI-score7-c.csv 
+SMCI-score7-h.csv 
+SMCI-score7-l.csv 
+SMCI-score7-m.csv 
+SMCI-summary.csv 
+SMCI-trades.csv 
+
+INFO  [2024-04-02 00:00:46] ############ 1WK24 May Wheat bc #############
+
+INFO  [2024-04-02 00:00:46] L1_main C:\Users\Lcalv\Documents\R\teng5/data/1WK24-$Detail.csv  read rows= 1968
+INFO  [2024-04-02 00:00:48] Barchart scrape - removing last row date=20240402 as market is open
+INFO  [2024-04-02 00:00:48] 1WK24 Last data date 24-04-01
+INFO  [2024-04-02 00:00:49] L1_predict 1WK24 May Wheat actual h none mstl1 bars= 41 All caught up
+INFO  [2024-04-02 00:00:49] L1_predict 1WK24 May Wheat actual h none mstl2 bars= 41 All caught up
+INFO  [2024-04-02 00:00:49] L1_predict 1WK24 May Wheat actual h none mstl3 bars= 41 All caught up
+INFO  [2024-04-02 00:00:49] L1_predict 1WK24 May Wheat actual h none zlma1 bars= 41 All caught up
+INFO  [2024-04-02 00:00:49] L1_predict 1WK24 May Wheat actual h none zlma2 bars= 41 All caught up
+INFO  [2024-04-02 00:00:49] L1_predict 1WK24 May Wheat actual h none zlma3 bars= 41 All caught up
+INFO  [2024-04-02 00:00:49] L1_predict 1WK24 May Wheat actual l none mstl1 bars= 41 All caught up
+INFO  [2024-04-02 00:00:49] L1_predict 1WK24 May Wheat actual l none mstl2 bars= 41 All caught up
+INFO  [2024-04-02 00:00:49] L1_predict 1WK24 May Wheat actual l none mstl3 bars= 41 All caught up
+INFO  [2024-04-02 00:00:49] L1_predict 1WK24 May Wheat actual l none zlma1 bars= 41 All caught up
+INFO  [2024-04-02 00:00:49] L1_predict 1WK24 May Wheat actual l none zlma2 bars= 41 All caught up
+INFO  [2024-04-02 00:00:49] L1_predict 1WK24 May Wheat actual l none zlma3 bars= 41 All caught up
+INFO  [2024-04-02 00:00:49] L1_predict 1WK24 May Wheat actual c none mstl1 bars= 41 All caught up
+INFO  [2024-04-02 00:00:49] L1_predict 1WK24 May Wheat actual c none mstl2 bars= 41 All caught up
+INFO  [2024-04-02 00:00:49] L1_predict 1WK24 May Wheat actual c none mstl3 bars= 41 All caught up
+INFO  [2024-04-02 00:00:49] L1_predict 1WK24 May Wheat actual c none zlma1 bars= 41 All caught up
+INFO  [2024-04-02 00:00:49] L1_predict 1WK24 May Wheat actual c none zlma2 bars= 41 All caught up
+INFO  [2024-04-02 00:00:49] L1_predict 1WK24 May Wheat actual c none zlma3 bars= 41 All caught up
+INFO  [2024-04-02 00:00:49] L1_predict 1WK24 May Wheat actual m none mstl1 bars= 41 All caught up
+INFO  [2024-04-02 00:00:49] L1_predict 1WK24 May Wheat actual m none mstl2 bars= 41 All caught up
+INFO  [2024-04-02 00:00:49] L1_predict 1WK24 May Wheat actual m none mstl3 bars= 41 All caught up
+INFO  [2024-04-02 00:00:49] L1_predict 1WK24 May Wheat actual m none zlma1 bars= 41 All caught up
+INFO  [2024-04-02 00:00:49] L1_predict 1WK24 May Wheat actual m none zlma2 bars= 41 All caught up
+INFO  [2024-04-02 00:00:49] L1_predict 1WK24 May Wheat actual m none zlma3 bars= 41 All caught up
+INFO  [2024-04-02 00:00:49] L1_predict writing C:\Users\Lcalv\Documents\R\teng5/data/1WK24-$Detail.csv rows= 1968
