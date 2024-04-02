@@ -21,7 +21,7 @@ datalen <- 4 * 20 * ppb # input data length 4 months
 SYMBOL_LIST <- tribble(
  ~symbol, ~desc, ~filename,~source, ~minmove, ~dollars, ~decimals, ~mad,~ddate, ~error1, ~error2,
  "1WK24", "May Wheat", "wheat.html", "bc", 0.25, 12.50, 2, 0.75,NA,NA,NA,
- "1CK24", "May Corn",  "corn.html", "bc", 0.25, 12.50, 2, 0.75,NA,NA,NA,
+ # "1CK24", "May Corn",  "corn.html", "bc", 0.25, 12.50, 2, 0.75,NA,NA,NA,
  # "1OK24", "May Oats",  "oats.html", "bc", 0.25, 12.50, 2, 0.75,NA,NA,NA,
  # "META", "Meta",  "meta.html", "tq", 0.01, 1, 2, 0.05,NA,NA,NA,
  # "DIS", "Disney",  "dis.html", "tq", 0.01, 1, 2, 0.05,NA,NA,NA,

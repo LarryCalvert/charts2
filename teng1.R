@@ -49,7 +49,7 @@ TUNE_TRADES <- FALSE  # Limited tune if FALSE quicker
 ## L2SCORE <- FALSE # Force L2 score, plot, and push even if data hasn't changed
 # L2TUNE <- FALSE # Force L2 tune even if data hasn't changed
 
-L2FORCE <- TRUE # Force scoring and L2 predict and charts
+L2FORCE <- FALSE # Force scoring and L2 predict and charts
 L2ERRP  <- FALSE # PREDICT L2 error
 DEBUG   <- FALSE
 
@@ -93,7 +93,7 @@ library("rjson")
 library("tidyjson")
 library("stringr")
 library("pandoc")
-library("git2r")
+# library("git2r")
 
 #library ("purrr") # required for drop_cols function
 #library("itsmr") # test37 only want fft filter overides forecast
@@ -363,16 +363,16 @@ if (GITPUSH == TRUE) {
   # print(paste0(cline, " retval=",retval))
 
   # new git2r ########################
-  if (file.exists(CHARTDIR )) { 
-    unlink(CHARTDIR, force = TRUE, recursive = TRUE)
-  }
-  local_repo_path <- CHARTDIR 
-  remote_repo_url <- "https://github.com/larrycalvert/charts2.git"
-  repo <- clone(remote_repo_url, local_repo_path)
-  
-  git2r::config(repo, user.name = "larrycalvert", user.email = "lcalvert@comcast.net")
-  cred <- cred_token(token = "R_TOKEN")
-  
+  # if (file.exists(CHARTDIR )) { 
+  #   unlink(CHARTDIR, force = TRUE, recursive = TRUE)
+  # }
+  # local_repo_path <- CHARTDIR 
+  # remote_repo_url <- "https://github.com/larrycalvert/charts2.git"
+  # repo <- clone(remote_repo_url, local_repo_path)
+  # 
+  # git2r::config(repo, user.name = "larrycalvert", user.email = "lcalvert@comcast.net")
+  # cred <- cred_token(token = "R_TOKEN")
+  # 
   # if (!file.exists(CHARTDIR)) {
   #   dir.create(CHARTDIR, showWarnings = TRUE, recursive = FALSE, mode = "0777")
   # }
@@ -3010,6 +3010,7 @@ for(symrow in 1:nrow(symbol_list )) { # symbol loop
     )
 
     ########### test ##########################
+    GITPUSH <- FALSE # disbale for now LRC
     if (GITPUSH == TRUE) {  
       # Add file to local repository
       add(repo, filename, force = TRUE)
