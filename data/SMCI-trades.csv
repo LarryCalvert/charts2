@@ -1,7 +1,0 @@
-symbol,tsys,tsrow,hadj,ladj,endate,enbors,enprice,entype,enquant,psprice,riskmm,exdate,exbors,exprice,extype,plmm,pldol,win,lose,pos,bars
-SMCI,M1,NA,-0.15,-0.25,24-02-05,Buy,655.75,Entry,1,587.95,271.2,24-02-12,Sell,806.5,Target,150.75,7537.5,1,0,0,6
-SMCI,M1,NA,-0.15,-0.25,24-02-13,Buy,788.5,Entry,1,745.51,171.96,24-02-16,Sell,1071.5,Target,283,14150,1,0,0,4
-SMCI,M1,NA,-0.15,-0.25,24-02-21,Buy,721,Entry,1,708.08,51.68,24-02-23,Sell,899,Target,178,8900,1,0,0,3
-SMCI,M1,NA,-0.15,-0.25,24-03-11,Buy,1044.25,Entry,1,1025,77,24-03-14,Sell,1163.5,Target,119.25,5962.5,1,0,0,4
-SMCI,M1,NA,-0.15,-0.25,24-03-19,Buy,910.75,Entry,1,863,191,24-03-26,Sell,1082.5,Target,171.75,8587.5,1,0,0,6
-SMCI,M1,NA,-0.15,-0.25,24-03-27,Buy,1009,Entry,1,986.34,90.64,NA,NA,NA,NA,NA,NA,NA,NA,1,3

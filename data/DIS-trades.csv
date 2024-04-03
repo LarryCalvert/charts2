@@ -1,6 +1,0 @@
-symbol,tsys,tsrow,hadj,ladj,endate,enbors,enprice,entype,enquant,psprice,riskmm,exdate,exbors,exprice,extype,plmm,pldol,win,lose,pos,bars
-DIS,M1,NA,0.15,-0.15,24-02-06,Buy,98.5,Entry,1,96.79,6.84,24-02-22,Sell,108.25,Target,9.75,487.5,1,0,0,12
-DIS,M1,NA,0.15,-0.15,24-02-23,Buy,106,Entry,1,105.83,0.68,24-03-04,Sell,114,Target,8,400,1,0,0,7
-DIS,M1,NA,0.15,-0.15,24-03-05,Buy,112.5,Entry,1,112.27,0.92,24-03-05,Sell,115,Target,2.5,125,1,0,0,1
-DIS,M1,NA,0.15,-0.15,24-03-07,Buy,109.75,Entry,1,109.2,2.2,24-03-08,Sell,111,Target,1.25,62.5,1,0,0,2
-DIS,M1,NA,0.15,-0.15,24-03-14,Buy,111.75,Entry,1,109.51,8.96,24-03-27,Sell,121.5,Target,9.75,487.5,1,0,0,10

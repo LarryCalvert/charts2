@@ -1,8 +1,0 @@
-symbol,tsys,tsrow,hadj,ladj,endate,enbors,enprice,entype,enquant,psprice,riskmm,exdate,exbors,exprice,extype,plmm,pldol,win,lose,pos,bars
-META,M1,NA,-0.25,-0.35,24-02-14,Buy,469.25,Entry,1,466.09,12.64,24-02-23,Sell,485.75,Target,16.5,825,1,0,0,7
-META,M1,NA,-0.25,-0.35,24-02-27,Buy,483,Entry,1,479.92,12.32,24-02-28,Sell,488.5,Target,5.5,275,1,0,0,2
-META,M1,NA,-0.25,-0.35,24-03-05,Buy,488.25,Entry,1,487.89,1.44,24-03-06,Sell,499.75,Target,11.5,575,1,0,0,2
-META,M1,NA,-0.25,-0.35,24-03-12,Buy,494.5,Entry,1,484.73,39.08,24-03-13,Sell,500.25,Target,5.75,287.5,1,0,0,2
-META,M1,NA,-0.25,-0.35,24-03-15,Buy,482.75,Entry,1,481.3,5.8,24-03-15,Sell,491.75,Target,9,450,1,0,0,1
-META,M1,NA,-0.25,-0.35,24-03-19,Buy,482.75,Entry,1,481.28,5.88,24-03-26,Sell,509.25,Target,26.5,1325,1,0,0,6
-META,M1,NA,-0.25,-0.35,24-03-27,Buy,493.75,Entry,1,488.07,22.72,NA,NA,NA,NA,NA,NA,NA,NA,1,3

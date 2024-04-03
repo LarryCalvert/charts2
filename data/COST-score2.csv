@@ -1,5 +1,0 @@
-symbol,group,dt,pproc,method,etime,mean,sd,zscore
-COST,actual,h,none,mstl3,12.7356,-0.4078,12.3397,0.9408
-COST,actual,l,none,mstl2,22.1269,-0.6123,13.9921,0.9007
-COST,actual,c,none,mstl1,9.9408,-0.4728,14.6151,0.8695
-COST,actual,m,none,mstl2,22.3766,-0.5963,12.9492,0.9221

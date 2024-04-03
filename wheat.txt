@@ -1,8 +1,0 @@
-Note - not yet working just an example for now.
-Entry:Buy stop 312.25
-Protective Stop: Sell 310.25
-
-Buy when price drops below 312.25 and then moves back up
-1st target
-2nd target
-

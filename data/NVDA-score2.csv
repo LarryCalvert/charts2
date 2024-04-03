@@ -1,5 +1,0 @@
-symbol,group,dt,pproc,method,etime,mean,sd,zscore
-NVDA,actual,h,none,mstl1,5.4107,-0.1186,32.5267,1.0692
-NVDA,actual,l,none,zlma1,11.2031,-0.0849,23.1131,1.0866
-NVDA,actual,c,none,zlma2,20.6317,-0.5913,24.8672,1.1277
-NVDA,actual,m,none,zlma3,16.7141,-0.3942,24.0335,1.0505
